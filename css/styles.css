@@ -1,0 +1,400 @@
+/* --------------------------------
+ * imports
+ * -------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+
+/* --------------------------------
+ * variables
+ * -------------------------------- */
+
+:root {
+    --color-theme: #548cff;
+    --color-theme-accent: #7900ff;
+
+    --color-dark-accent: #0002;
+    --color-light-accent: #fff2;
+
+    --color-grey: #707070;
+    --color-grey-accent: #70707070;
+
+    --color-black: #0e0b16;
+    --color-black-accent: #1a1a40;
+    --color-white: #fff;
+    --color-white-accent: #f5f5f9;
+
+    --color-border-black: #0001;
+    --color-border-white: #fff1;
+    --color-shadow-black: #0007;
+    --color-shadow-white: #000;
+
+    --bs-primary: var(--color-theme);
+    --bs-secondary: var(--color-theme-accent);
+    --bs-body-color: var(--color-black);
+
+    --bs-font-sans-serif: 'DM Sans', sans-serif;
+    --bs-body-font-family: var(--bs-font-sans-serif);
+
+    --fw-n: 400;
+    --fw-m: 500;
+    --fw-b: 700;
+}
+
+/* --------------------------------
+ * reset
+ * -------------------------------- */
+
+body {
+    background-color: var(--color-white-accent);
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+    font-weight: var(--fw-b);
+}
+
+p {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* --------------------------------
+ * classes
+ * -------------------------------- */
+
+.btn {
+    padding: 0.5em 1em;
+    border: none;
+    box-shadow: none;
+    font-weight: var(--fw-m);
+}
+.btn.btn-wide {
+    padding: 0.5em 2em;
+}
+.btn.btn-full {
+    width: 100%;
+}
+.btn:hover,
+.btn:focus {
+    box-shadow: 0 0 10px -3px var(--color-shadow-black);
+}
+
+.btns .btn {
+    margin-left: 1rem;
+}
+.btns .btn:first-child {
+    margin-left: 0;
+}
+.icon-btns .btn {
+    margin-left: 0.25rem;
+    padding: 0.25rem 0.5rem;
+}
+.icon-btns .btn:first-child {
+    margin-left: 0;
+}
+
+.btn.btn-primary {
+    background-color: var(--color-theme);
+    color: var(--color-white);
+}
+.btn.btn-primary:hover,
+.btn.btn-primary:focus {
+    background-color: var(--color-theme-accent);
+}
+
+.btn.btn-secondary {
+    background-color: var(--color-grey);
+    color: var(--color-white);
+}
+.btn.btn-secondary:hover,
+.btn.btn-secondary:focus {
+    background-color: var(--color-theme);
+}
+
+.form-group,
+.form-submit-group {
+    margin-top: 2rem;
+}
+.form-group:first-child {
+    margin-top: 0;
+}
+.form-label {
+    font-weight: var(--fw-m);
+}
+.form-control,
+.form-select {
+    padding: 0.5rem 0.75rem;
+    border: none;
+}
+textarea.form-control {
+    min-height: 100px;
+    resize: none;
+}
+.form-control:focus {
+    box-shadow: 0 0 0 3px var(--color-theme);
+}
+
+.form-submit-group .btn {
+    margin-left: 1rem;
+}
+.form-submit-group .btn:first-child {
+    margin-left: 0;
+}
+.form-submit {
+    padding: 0.5em 1.5em;
+}
+
+.table {
+    margin: 0;
+    border-radius: 0.25rem;
+    overflow: hidden;
+    color: inherit;
+}
+.table thead {
+    background-color: var(--color-black-accent);
+    color: var(--color-white);
+}
+.table th {
+    padding: 0.75rem;
+    box-shadow: inset 0 0 0 1px var(--color-border-white);
+}
+.table td {
+    padding: 0.75rem;
+    box-shadow: inset 0 0 0 1px var(--color-border-black);
+    vertical-align: middle;
+}
+
+/* --------------------------------
+ * ap form
+ * -------------------------------- */
+
+.ap-form .form-label {
+    margin-bottom: 0.25rem;
+    color: var(--color-grey);
+}
+.ap-form .form-control,
+.ap-form .form-select {
+    border: 1px solid var(--color-border-black);
+}
+
+/* --------------------------------
+ * login page
+ * -------------------------------- */
+
+.login-page {
+    min-height: 100vh;
+    padding: 5rem 0;
+    background-color: var(--color-black);
+    background-image: linear-gradient(to bottom, var(--color-black), var(--color-black-accent));
+    color: var(--color-white);
+}
+.login-container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+.login-header {
+    text-align: center;
+}
+.login-header .logo-cont {
+    height: 3rem;
+}
+.login-header .login-title {
+    margin: 1rem 0 0;
+    font-size: 2rem;
+}
+.login-body {
+    margin-top: 2rem;
+}
+.login-form {
+    padding: 2rem;
+    background-color: var(--color-light-accent);
+    border-radius: 0.5rem;
+    box-shadow: 0 0 30px -10px var(--color-shadow-white);
+}
+
+.logo-cont {
+    height: 3rem;
+}
+
+/* --------------------------------
+ * layout - sidebar
+ * -------------------------------- */
+
+.ap-aside {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100vh;
+    padding: 1.5rem 2rem;
+    background-color: var(--color-black-accent);
+    background-image: linear-gradient(to bottom, var(--color-black-accent), var(--color-black));
+    box-shadow: 0 0 20px -10px var(--color-shadow-black);
+    color: var(--color-white);
+}
+
+.aside-nav {
+    margin-top: 3rem;
+}
+.aside-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.aside-nav li > ul {
+    padding-left: 1rem;
+    border-left: 1px solid var(--color-theme);
+}
+.aside-nav li {
+    margin-top: 0.25rem;
+}
+.aside-nav .nav-item-head {
+    display: flex;
+    align-items: center;
+}
+.aside-nav a {
+    display: block;
+    flex: 1;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    color: var(--color-grey);
+    font-weight: var(--fw-m);
+    transition: 0.1s ease-in-out;
+}
+.aside-nav a:hover {
+    padding-left: 1.5rem;
+    color: var(--color-theme);
+}
+.aside-nav a.active {
+    padding-left: 1.5rem;
+    background-color: var(--color-theme-accent);
+    color: var(--color-white);
+    font-weight: var(--fw-b);
+}
+.aside-nav .btn {
+    display: flex;
+    padding: 0.25rem 0.5rem;
+    color: var(--color-grey);
+    align-items: center;
+}
+.aside-nav .btn:hover {
+    color: var(--color-theme);
+}
+.aside-nav .btn:not(.collapsed) {
+    background-color: var(--color-theme-accent);
+    color: var(--color-white);
+}
+
+/* --------------------------------
+ * layout - header
+ * -------------------------------- */
+
+.ap-header {
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    display: flex;
+    margin-left: 300px;
+    padding: 1.5rem 2rem;
+    background-color: var(--color-theme-accent);
+    color: var(--color-white);
+    box-shadow: 0 0 20px -10px var(--color-shadow-black);
+    justify-content: space-between;
+    align-items: center;
+}
+.ap-header .pg-title {
+    font-size: 1.5rem;
+    box-shadow: 0 3px var(--color-white);
+}
+.ap-header .au-info {
+    font-weight: var(--fw-m);
+}
+
+/* --------------------------------
+ * layout - main
+ * -------------------------------- */
+
+.ap-main {
+    margin-left: 300px;
+    padding: 1.5rem 2rem;
+}
+
+.ap-main-head {
+    display: flex;
+    padding: 1rem 0;
+    justify-content: space-between;
+    align-items: center;
+}
+.ap-main-head .back-btn {
+    text-decoration: none;
+    color: var(--color-grey);
+    font-weight: var(--fw-m);
+}
+.ap-main-head .back-btn i {
+    margin-right: 0.25em;
+}
+.ap-main-head .back-btn:hover {
+    color: var(--color-theme);
+}
+
+.ap-main-body {
+    padding: 1rem 0;
+}
+
+.ap-sec-out-title {
+    color: var(--color-black-accent);
+    font-size: 2rem;
+}
+
+.ap-sec {
+    --color-highlight: var(--color-theme-accent);
+
+    height: 100%;
+    overflow: hidden;
+    background-color: var(--color-white);
+    border-radius: 0.5rem;
+    box-shadow: 0 0 20px -10px var(--color-shadow-black);
+}
+.ap-sec-theme {
+    --color-highlight: var(--color-white);
+    --color-grey: var(--color-white);
+
+    background-color: var(--color-theme-accent);
+    color: var(--color-white);
+}
+
+.ap-sec-head {
+    display: flex;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--color-border-black);
+    justify-content: space-between;
+    align-items: center;
+}
+.ap-sec-theme .ap-sec-head {
+    border-bottom-color: var(--color-white-accent);
+}
+
+.ap-sec-body {
+    padding: 1rem 1.5rem;
+}
+
+.ap-sec .sec-title {
+    font-size: 1.5rem;
+}
+
+.sec-count {
+    color: var(--color-highlight);
+    font-size: 3rem;
+    font-weight: var(--fw-b);
+}
+.sec-count-desc {
+    color: var(--color-grey);
+}

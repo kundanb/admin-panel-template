@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="icon" href="img/favicon.ico" />
+        <title>Dashboard - Admin Panel</title>
+
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="css/media.css" />
+
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="https://kit.fontawesome.com/176ceffb22.js" crossorigin="anonymous"></script>
+        <script src="js/chart.min.js"></script>
+        <script src="js/script.js" defer></script>
+    </head>
+
+    <body>
+        <aside class="ap-aside">
+            <div class="logo-cont text-center">
+                <img src="img/logo.png" alt="logo" />
+            </div>
+
+            <nav class="aside-nav">
+                <ul>
+                    <li><a href="dashboard.html" class="active">Dashboard</a></li>
+                    <li><a href="#">Overview</a></li>
+                    <li>
+                        <div class="nav-item-head">
+                            <a href="students.html">Students</a>
+                            <button class="btn collapsed" data-bs-toggle="collapse" data-bs-target="#aside-nav-list-students">
+                                <i class="fas fa-angle-down"></i>
+                            </button>
+                        </div>
+                        <ul class="collapse" id="aside-nav-list-students">
+                            <li><a href="students.html">Students List</a></li>
+                            <li><a href="add-student.html">Add Student</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="settings.html">Settings</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <header class="ap-header">
+            <h1 class="pg-title">Dashboard</h1>
+
+            <div class="au-cont">
+                <div class="au-info">Welcome, Admin</div>
+            </div>
+        </header>
+
+        <main class="ap-main">
+            <div class="ap-main-head">
+                <a href="dashboard.html" class="back-btn"><i class="fas fa-angle-left"></i> Back</a>
+            </div>
+
+            <div class="ap-main-body">
+                <div class="row g-4">
+                    <div class="col col-4">
+                        <div class="ap-sec">
+                            <div class="ap-sec-head">
+                                <h2 class="sec-title">Numbers</h2>
+                            </div>
+                            <div class="ap-sec-body">
+                                <p class="sec-count">1250</p>
+                                <p class="sec-count-desc">Lorem, ipsum dolor.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col col-4">
+                        <div class="ap-sec ap-sec-theme">
+                            <div class="ap-sec-head">
+                                <h2 class="sec-title">Numbers</h2>
+                            </div>
+                            <div class="ap-sec-body">
+                                <p class="sec-count">1250</p>
+                                <p class="sec-count-desc">Lorem, ipsum dolor.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col col-4">
+                        <div class="ap-sec">
+                            <div class="ap-sec-head">
+                                <h2 class="sec-title">Numbers</h2>
+                            </div>
+                            <div class="ap-sec-body">
+                                <p class="sec-count">1250</p>
+                                <p class="sec-count-desc">Lorem, ipsum dolor.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col col-8">
+                        <div class="ap-sec">
+                            <div class="ap-sec-head">
+                                <h2 class="sec-title">Overview</h2>
+                            </div>
+
+                            <div class="ap-sec-body">
+                                <canvas id="chart1"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col col-4">
+                        <div class="ap-sec">
+                            <div class="ap-sec-head">
+                                <h2 class="sec-title">Numbers</h2>
+                            </div>
+                            <div class="ap-sec-body">
+                                <p class="sec-count">45</p>
+                                <p class="sec-count-desc">This is desc 1.</p>
+                                <p class="sec-count">30</p>
+                                <p class="sec-count-desc">This is desc 2.</p>
+                                <p class="sec-count">0</p>
+                                <p class="sec-count-desc">This is desc 3.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col col-4">
+                        <div class="ap-sec ap-sec-theme">
+                            <div class="ap-sec-head">
+                                <h2 class="sec-title">Numbers</h2>
+                            </div>
+                            <div class="ap-sec-body">
+                                <p class="sec-count">1250</p>
+                                <p class="sec-count-desc">Lorem, ipsum dolor.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col col-8">
+                        <div class="ap-sec">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Sr. No.</th>
+                                            <th>Name</th>
+                                            <th>Description</th>
+                                            <th>Date</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Mobile</td>
+                                            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quia.</td>
+                                            <td>12/12/2019</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Mobile</td>
+                                            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quia.</td>
+                                            <td>12/12/2019</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Mobile</td>
+                                            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quia.</td>
+                                            <td>12/12/2019</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col col-6">
+                        <div class="ap-sec">
+                            <div class="ap-sec-head">
+                                <h2 class="sec-title">Form 1</h2>
+                                <div class="btns">
+                                    <button class="btn btn-primary"><i class="fas fa-plus"></i> Add</button>
+                                    <button class="btn btn-danger"><i class="fas fa-trash"></i> Delete</button>
+                                </div>
+                            </div>
+
+                            <div class="ap-sec-body">
+                                <form class="ap-form">
+                                    <div class="form-group">
+                                        <label class="form-label">Enter Text</label>
+                                        <input type="text" class="form-control" placeholder="Enter Text" />
+                                        <p class="mt-1 text-danger">Here comes the error!</p>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="form-label">Select Option</label>
+                                        <select class="form-select">
+                                            <option disabled selected>Select Any Option</option>
+                                            <option value="1">Option 1</option>
+                                            <option value="2">Option 2</option>
+                                            <option value="3">Option 3</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="form-label">Enter Textarea</label>
+                                        <textarea class="form-control" placeholder="Enter Textarea"></textarea>
+                                    </div>
+
+                                    <div class="form-submit-group">
+                                        <button class="btn btn-wide btn-primary">Submit</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col col-6">
+                        <div class="ap-sec">
+                            <div class="ap-sec-head">
+                                <h2 class="sec-title">Form 2</h2>
+                                <div class="btns">
+                                    <button class="btn btn-success"><i class="fas fa-check"></i> Check</button>
+                                </div>
+                            </div>
+
+                            <div class="ap-sec-body">
+                                <form class="ap-form">
+                                    <div class="form-group">
+                                        <label class="form-label">Enter Text</label>
+                                        <input type="text" class="form-control" placeholder="Enter Text" />
+                                        <p class="mt-1 text-danger">Here comes the error!</p>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="form-label">Select Option</label>
+                                        <select class="form-select">
+                                            <option disabled selected>Select Any Option</option>
+                                            <option value="1">Option 1</option>
+                                            <option value="2">Option 2</option>
+                                            <option value="3">Option 3</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="form-label">Enter Textarea</label>
+                                        <textarea class="form-control" placeholder="Enter Textarea"></textarea>
+                                    </div>
+
+                                    <div class="form-submit-group">
+                                        <button class="btn btn-wide btn-primary">Submit</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col col-12">
+                        <div class="ap-sec">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Sr. No.</th>
+                                            <th>Name</th>
+                                            <th>Description</th>
+                                            <th>Date</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Mobile</td>
+                                            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quia.</td>
+                                            <td>12/12/2019</td>
+                                            <td class="icon-btns">
+                                                <button class="btn btn-primary"><i class="fas fa-eye"></i></button>
+                                                <button class="btn btn-warning"><i class="fas fa-pen"></i></button>
+                                                <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Mobile</td>
+                                            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quia.</td>
+                                            <td>12/12/2019</td>
+                                            <td class="icon-btns">
+                                                <button class="btn btn-primary"><i class="fas fa-eye"></i></button>
+                                                <button class="btn btn-warning"><i class="fas fa-pen"></i></button>
+                                                <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Mobile</td>
+                                            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quia.</td>
+                                            <td>12/12/2019</td>
+                                            <td class="icon-btns">
+                                                <button class="btn btn-primary"><i class="fas fa-eye"></i></button>
+                                                <button class="btn btn-warning"><i class="fas fa-pen"></i></button>
+                                                <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Mobile</td>
+                                            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quia.</td>
+                                            <td>12/12/2019</td>
+                                            <td class="icon-btns">
+                                                <button class="btn btn-primary"><i class="fas fa-eye"></i></button>
+                                                <button class="btn btn-warning"><i class="fas fa-pen"></i></button>
+                                                <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Mobile</td>
+                                            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quia.</td>
+                                            <td>12/12/2019</td>
+                                            <td class="icon-btns">
+                                                <button class="btn btn-primary"><i class="fas fa-eye"></i></button>
+                                                <button class="btn btn-warning"><i class="fas fa-pen"></i></button>
+                                                <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Mobile</td>
+                                            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quia.</td>
+                                            <td>12/12/2019</td>
+                                            <td class="icon-btns">
+                                                <button class="btn btn-primary"><i class="fas fa-eye"></i></button>
+                                                <button class="btn btn-warning"><i class="fas fa-pen"></i></button>
+                                                <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Mobile</td>
+                                            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quia.</td>
+                                            <td>12/12/2019</td>
+                                            <td class="icon-btns">
+                                                <button class="btn btn-primary"><i class="fas fa-eye"></i></button>
+                                                <button class="btn btn-warning"><i class="fas fa-pen"></i></button>
+                                                <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Mobile</td>
+                                            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quia.</td>
+                                            <td>12/12/2019</td>
+                                            <td class="icon-btns">
+                                                <button class="btn btn-primary"><i class="fas fa-eye"></i></button>
+                                                <button class="btn btn-warning"><i class="fas fa-pen"></i></button>
+                                                <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Mobile</td>
+                                            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quia.</td>
+                                            <td>12/12/2019</td>
+                                            <td class="icon-btns">
+                                                <button class="btn btn-primary"><i class="fas fa-eye"></i></button>
+                                                <button class="btn btn-warning"><i class="fas fa-pen"></i></button>
+                                                <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- <div class="ap-layout">
+            <div class="ap-sb">
+                <div class="sb-head">
+                    <div class="logo-cont">
+                        <img src="img/logo.png" />
+                    </div>
+                </div>
+                <div class="sb-body">
+                    <nav class="sb-nav">
+                        <ul class="nav-list">
+                            <li><a href="dashboard.html" class="active">Dashboard</a></li>
+                            <li>
+                                <div class="nav-dd-label">
+                                    <a href="#">Database</a>
+                                    <button class="btn nav-dd-icon js-toggle-sb-nav-dd">
+                                        <i class="fas fa-caret-down"></i>
+                                    </button>
+                                </div>
+                                <div class="nav-dd-body collapse">
+                                    <ul class="nav-dd-list">
+                                        <li><a href="listing.html">Listing</a></li>
+                                        <li><a href="add-item.html">Add Item</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a href="settings.html">Settings</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="admin-content">
+                <div class="admin-header">
+                    <div class="user-cont">
+                        <div class="user-info">
+                            <div class="user-name">
+                                <span>Welcome,</span>
+                                <span>Admin</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="admin-main">
+                    <div class="admin-main-header">
+                        <div class="admin-breadcrumbs"></div>
+                    </div>
+
+                    <div class="ad-main-body">
+                        <div class="row g-4">
+                            <div class="col col-8">
+                                <div class="ad-sec">
+                                    <h2 class="admin-sec-title">Overview</h2>
+                                </div>
+                            </div>
+                            <div class="col col-4">
+                                <div class="ad-sec">
+                                    <h2 class="admin-sec-title">Settings</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    </body>
+</html>
